@@ -9,6 +9,7 @@ import StatsBox from '../components/StatsBox';
 import customerData from '../data/customer-data';
 import HeroImage from '../svg/HeroImage';
 import SvgCharts from '../svg/SvgCharts';
+import Typewriter from "typewriter-effect";
 
 export default () => (
   <Layout>
@@ -16,25 +17,26 @@ export default () => (
       <div className="container mx-auto px-8 lg:flex">
         <div className="text-center lg:text-left lg:w-1/2">
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
-            Main title of your landing page
+          Il modo smart di vivere il condominio
+            
           </h1>
           <p className="text-xl lg:text-2xl mt-6 font-light">
-            Free landing page template to promote your business startup and generate leads for the
-            offered services
+            Scopri come rendere la tua via da condomino molto più organizzata grazie a un'app fatta apposta per casa tua
           </p>
           <p className="mt-8 md:mt-12">
-            <Button size="lg">Get Started</Button>
+            <input className="bg-gray-200 py-3 px-2 text-green rounded-l focus:outline-none" placeholder="La tua migliore email..." type="text"/>
+            <Button size="default" className="rounded-l-none">Iscriviti alla Beta</Button>
           </p>
-          <p className="mt-4 text-gray-600">Sed fermentum felis ut cursu</p>
+          <p className="mt-5 sm:mt-4 text-gray-600">rimani aggiornato sullo sviluppo!</p>
         </div>
-        <div className="lg:w-1/2">
+        <div className="lg:w-1/2 mt-4 sm:mt-0">
           <HeroImage />
         </div>
       </div>
     </section>
     <section id="features" className="py-20 lg:pb-40 lg:pt-48">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl lg:text-5xl font-semibold">Main Features</h2>
+        <h2 className="text-3xl lg:text-5xl font-semibold">Caratteristiche <span role="img" aria-label="hand pointing down">👇🏻</span></h2>
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="flex-1 px-3">
             <Card className="mb-8">
