@@ -10,3 +10,10 @@ Per ora in sviluppo la landing page marketing di iCondomini
 
 - Nome app
 - Logo
+
+### Stack:
+
+- GatsbyJS
+- Tailwind CSS
+- PostCSS con PurgeCSS
+- Undraw SVG illustrations
