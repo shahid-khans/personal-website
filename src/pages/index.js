@@ -25,9 +25,9 @@ export default () => (
           </p>
           <p className="mt-8 md:mt-12">
             <input className="bg-gray-200 py-3 px-2 text-green rounded-l focus:outline-none" placeholder="La tua migliore email..." type="text"/>
-            <Button size="default" className="rounded-l-none">Iscriviti alla Beta</Button>
+            <Button size="default" className="rounded-l-none">Richiedi Accesso</Button>
           </p>
-          <p className="mt-5 sm:mt-4 text-gray-600">rimani aggiornato sullo sviluppo!</p>
+          <p className="mt-5 sm:mt-4 text-gray-600 ">100% gratis, no carta di credito</p>
         </div>
         <div className="lg:w-1/2 mt-4 sm:mt-0">
           <HeroImage />
@@ -40,28 +40,27 @@ export default () => (
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Service One</p>
+            <div className="relative items-center text-center center align-center">
+            </div>
+              <p className="font-semibold text-xl">Sempre aggiornato</p>
               <p className="mt-4">
-                An enim nullam tempor gravida donec enim ipsum blandit porta justo integer odio
-                velna vitae auctor integer.
+                Ricevi notifiche per non perderti nulla delle decisioni che vengono prese nelle assemblee condominiali.
               </p>
             </Card>
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Service Two</p>
+              <p className="font-semibold text-xl">Trasparente</p>
               <p className="mt-4">
-                An enim nullam tempor gravida donec enim ipsum blandit porta justo integer odio
-                velna vitae auctor integer.
+                Non lasciare che nulla venga lasciato agli amministratori senza supervisione. Tieni traccia di ciò che avviene nella tua casa.
               </p>
             </Card>
           </div>
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <p className="font-semibold text-xl">Service Three</p>
+              <p className="font-semibold text-xl">Vota i provvedimenti</p>
               <p className="mt-4">
-                An enim nullam tempor gravida donec enim ipsum blandit porta justo integer odio
-                velna vitae auctor integer.
+                Votando direttamente dal web, non ti perderai mai più una votazione importante sui provvedimenti all'ordine del giorno.
               </p>
             </Card>
           </div>
@@ -112,7 +111,7 @@ export default () => (
     />
     <section id="stats" className="py-20 lg:pt-32">
       <div className="container mx-auto text-center">
-        <LabelText className="text-gray-600">Our customers get results</LabelText>
+        <LabelText className="text-gray-600">I risultati dei nostri clienti</LabelText>
         <div className="flex flex-col sm:flex-row mt-8 lg:px-24">
           <div className="w-full sm:w-1/3">
             <StatsBox primaryText="+100%" secondaryText="Stats Information" />
@@ -126,6 +125,7 @@ export default () => (
         </div>
       </div>
     </section>
+    {/*
     <section id="testimonials" className="py-20 lg:py-40">
       <div className="container mx-auto">
         <LabelText className="mb-8 text-gray-600 text-center">What customers are saying</LabelText>
@@ -138,13 +138,15 @@ export default () => (
         </div>
       </div>
     </section>
+    */}
     <section className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center">
-      <h3 className="text-5xl font-semibold">Ready to grow your business?</h3>
-      <p className="mt-8 text-xl font-light">
-        Quis lectus nulla at volutpat diam ut. Enim lobortis scelerisque fermentum dui faucibus in.
+      <h3 className="text-3xl sm:text-5xl font-semibold">Gestire il condominio non deve essere un peso </h3>
+      <p className="mt-4 text-lg sm:text-xl font-light">
+      Sei pronto a migliorare l'esperienza condominiale per te e tutta la tua abitazione? <br />
+      Iscriviti per scoprire di più su cosa possiamo fare per te.
       </p>
       <p className="mt-8">
-        <Button size="xl">Get Started Now</Button>
+        <Button size="xl">Voglio rimanere aggiornato</Button>
       </p>
     </section>
   </Layout>
