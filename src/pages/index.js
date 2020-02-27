@@ -10,7 +10,6 @@ import StatsBox from '../components/StatsBox';
 import customerData from '../data/customer-data';
 import HeroImage from '../svg/HeroImage';
 import SvgCharts from '../svg/SvgCharts';
-import Typewriter from "typewriter-effect";
 
 export default () => (
   <Layout>
@@ -18,17 +17,25 @@ export default () => (
       <div className="container mx-auto px-8 lg:flex">
         <div className="text-center lg:text-left lg:w-1/2">
           <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
-          Il modo smart di vivere il condominio
-            
+            Il modo smart di vivere il condominio
           </h1>
           <p className="text-xl lg:text-2xl mt-6 font-light">
-            Scopri come rendere la tua vita da condomino molto più organizzata grazie a un'app fatta apposta per casa tua
+            Scopri come rendere la tua vita da condomino molto più organizzata grazie a un'app fatta
+            apposta per casa tua
           </p>
           <p className="mt-8 md:mt-8">
-            <input className="bg-gray-200 py-3 px-2 text-green rounded-l focus:outline-none" placeholder="La tua migliore email..." type="text"/>
-            <Button size="default" className="mt-2 sm:rounded-l-none">Richiedi Accesso</Button>
+            <input
+              className="bg-gray-200 py-3 px-2 text-green rounded-l focus:outline-none"
+              placeholder="La tua migliore email..."
+              type="text"
+            />
+            <Button size="default" className="mt-2 sm:rounded-l-none">
+              Richiedi Accesso
+            </Button>
           </p>
-          <p className="mt-5 sm:mt-4 text-gray-600 text-green-400">100% gratis, no carta di credito</p>
+          <p className="mt-5 sm:mt-4 text-gray-600 text-green-400">
+            100% gratis, no carta di credito
+          </p>
         </div>
         <div className="lg:w-1/2 mt-4 sm:mt-0">
           <HeroImage />
@@ -37,15 +44,20 @@ export default () => (
     </section>
     <section id="features" className="py-20 lg:pb-40 lg:pt-48">
       <div className="container mx-auto text-center">
-        <h2 className="text-3xl lg:text-5xl font-semibold">Caratteristiche <span role="img" aria-label="hand pointing down">👇🏻</span></h2>
+        <h2 className="text-3xl lg:text-5xl font-semibold">
+          Caratteristiche{' '}
+          <span role="img" aria-label="hand pointing down">
+            👇🏻
+          </span>
+        </h2>
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="flex-1 px-3">
             <Card className="mb-8">
-            <div className="relative items-center text-center center align-center">
-            </div>
+              <div className="relative items-center text-center center align-center"></div>
               <p className="font-semibold text-xl">Sempre aggiornato</p>
               <p className="mt-4">
-                Ricevi notifiche per non perderti nulla delle decisioni che vengono prese nelle assemblee condominiali.
+                Ricevi notifiche per non perderti nulla delle decisioni che vengono prese nelle
+                assemblee condominiali.
               </p>
             </Card>
           </div>
@@ -53,7 +65,8 @@ export default () => (
             <Card className="mb-8">
               <p className="font-semibold text-xl">Trasparente</p>
               <p className="mt-4">
-                Non lasciare che nulla venga lasciato agli amministratori senza supervisione. Tieni traccia di ciò che avviene nella tua casa.
+                Non lasciare che nulla venga lasciato agli amministratori senza supervisione. Tieni
+                traccia di ciò che avviene nella tua casa.
               </p>
             </Card>
           </div>
@@ -61,7 +74,8 @@ export default () => (
             <Card className="mb-8">
               <p className="font-semibold text-xl">Vota i provvedimenti</p>
               <p className="mt-4">
-                Votando direttamente dal web, non ti perderai mai più una votazione importante sui provvedimenti all'ordine del giorno.
+                Votando direttamente dal web, non ti perderai mai più una votazione importante sui
+                provvedimenti all'ordine del giorno.
               </p>
             </Card>
           </div>
@@ -145,15 +159,23 @@ export default () => (
     </section>
     */}
     <section className="container mx-auto mt-20 py-24 bg-blue-200 sm:rounded-lg text-center">
-      <h3 className="text-2xl sm:text-3xl font-semibold">Gestire il condominio non deve essere un peso <span role="img" aria-label="hand pointing down">🤯</span></h3>
+      <h3 className="text-2xl sm:text-3xl font-semibold">
+        Gestire il condominio non deve essere un peso{' '}
+        <span role="img" aria-label="hand pointing down">
+          🤯
+        </span>
+      </h3>
       <p className="mt-4 text-lg sm:text-xl font-light">
-      Iscriviti per scoprire di più su cosa possiamo fare per te.
+        Iscriviti per scoprire di più su cosa possiamo fare per te.
       </p>
-      <input className="bg-gray-200 mt-4 py-3 px-2 text-green rounded-l focus:outline-none" 
-        placeholder="La tua migliore email..." type="text"/>
-        <Button size="default" className="mt-2 sm:rounded-l-none">
+      <input
+        className="bg-gray-200 mt-4 py-3 px-2 text-green rounded-l focus:outline-none"
+        placeholder="La tua migliore email..."
+        type="text"
+      />
+      <Button size="default" className="mt-2 sm:rounded-l-none">
         Tienimi aggiornato
-        </Button>
+      </Button>
     </section>
   </Layout>
 );
