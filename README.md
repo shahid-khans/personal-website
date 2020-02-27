@@ -17,7 +17,6 @@ Per ora in sviluppo la landing page - marketing di iCondomini
   - [ ] Spiegazione caratteristiche
   - [ ] Immagini / Illustrazioni per spiegazione caratteristiche
   - [ ] Testimonials
-  - [ ] Prezzo
   - [ ] Statistiche
   - [x] Call to Action
 
@@ -27,6 +26,8 @@ Per ora in sviluppo la landing page - marketing di iCondomini
   - [x] domanda "cosa vogliamo fare?"
   - [x] Call to action
 
+- [x] Pagina dei Prezzi
+- [ ] Sezione FAQ
 - [ ] Blog
 - [ ] Termini e Condizioni
 - [ ] Politica sulla Privacy

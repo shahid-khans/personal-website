@@ -29,7 +29,7 @@ export default () => (
             type="text"
           />
           <Link to="/">
-            <Button size="sm" className="sm:py-3 rounded-l-none">
+            <Button size="sm" className="sm:py-3 sm:px-8 rounded-l-none">
               Scopri di più
             </Button>
           </Link>
