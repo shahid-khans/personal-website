@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import CustomerCard from '../components/CustomerCard';
@@ -21,13 +22,13 @@ export default () => (
             
           </h1>
           <p className="text-xl lg:text-2xl mt-6 font-light">
-            Scopri come rendere la tua via da condomino molto più organizzata grazie a un'app fatta apposta per casa tua
+            Scopri come rendere la tua vita da condomino molto più organizzata grazie a un'app fatta apposta per casa tua
           </p>
-          <p className="mt-8 md:mt-12">
+          <p className="mt-8 md:mt-8">
             <input className="bg-gray-200 py-3 px-2 text-green rounded-l focus:outline-none" placeholder="La tua migliore email..." type="text"/>
-            <Button size="default" className="rounded-l-none">Richiedi Accesso</Button>
+            <Button size="default" className="mt-2 sm:rounded-l-none">Richiedi Accesso</Button>
           </p>
-          <p className="mt-5 sm:mt-4 text-gray-600 ">100% gratis, no carta di credito</p>
+          <p className="mt-5 sm:mt-4 text-gray-600 text-green-400">100% gratis, no carta di credito</p>
         </div>
         <div className="lg:w-1/2 mt-4 sm:mt-0">
           <HeroImage />
@@ -109,6 +110,8 @@ export default () => (
       }
       secondarySlot={<SvgCharts />}
     />
+
+    {/*
     <section id="stats" className="py-20 lg:pt-32">
       <div className="container mx-auto text-center">
         <LabelText className="text-gray-600">I risultati dei nostri clienti</LabelText>
@@ -125,6 +128,8 @@ export default () => (
         </div>
       </div>
     </section>
+    */}
+
     {/*
     <section id="testimonials" className="py-20 lg:py-40">
       <div className="container mx-auto">
@@ -139,15 +144,16 @@ export default () => (
       </div>
     </section>
     */}
-    <section className="container mx-auto my-20 py-24 bg-gray-200 rounded-lg text-center">
-      <h3 className="text-3xl sm:text-5xl font-semibold">Gestire il condominio non deve essere un peso </h3>
+    <section className="container mx-auto mt-20 py-24 bg-blue-200 sm:rounded-lg text-center">
+      <h3 className="text-2xl sm:text-3xl font-semibold">Gestire il condominio non deve essere un peso <span role="img" aria-label="hand pointing down">🤯</span></h3>
       <p className="mt-4 text-lg sm:text-xl font-light">
-      Sei pronto a migliorare l'esperienza condominiale per te e tutta la tua abitazione? <br />
       Iscriviti per scoprire di più su cosa possiamo fare per te.
       </p>
-      <p className="mt-8">
-        <Button size="xl">Voglio rimanere aggiornato</Button>
-      </p>
+      <input className="bg-gray-200 mt-4 py-3 px-2 text-green rounded-l focus:outline-none" 
+        placeholder="La tua migliore email..." type="text"/>
+        <Button size="default" className="mt-2 sm:rounded-l-none">
+        Tienimi aggiornato
+        </Button>
     </section>
   </Layout>
 );
