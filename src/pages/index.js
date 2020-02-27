@@ -20,20 +20,20 @@ export default () => (
             Il modo smart di vivere il condominio
           </h1>
           <p className="text-xl lg:text-2xl mt-6 font-light">
-            Scopri come rendere la tua vita da condomino molto più organizzata grazie a un'app fatta
-            apposta per casa tua
+            Scopri come rendere la tua vita da condomino molto più organizzata grazie a un&apos;app
+            fatta apposta per casa tua
           </p>
           <p className="mt-8 md:mt-8">
             <input
-              className="bg-gray-200 py-3 px-2 text-green rounded-l focus:outline-none"
+              className="hidden sm:inline bg-gray-200 py-3 px-2 text-green rounded-l focus:outline-none"
               placeholder="La tua migliore email..."
               type="text"
             />
             <Button size="default" className="mt-2 sm:rounded-l-none">
-              Richiedi Accesso
+              Scopri di più
             </Button>
           </p>
-          <p className="mt-5 sm:mt-4 text-gray-600 text-green-400">
+          <p className="my-3 sm:mt-4 text-gray-600 text-green-400">
             100% gratis, no carta di credito
           </p>
         </div>
@@ -53,7 +53,6 @@ export default () => (
         <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
           <div className="flex-1 px-3">
             <Card className="mb-8">
-              <div className="relative items-center text-center center align-center"></div>
               <p className="font-semibold text-xl">Sempre aggiornato</p>
               <p className="mt-4">
                 Ricevi notifiche per non perderti nulla delle decisioni che vengono prese nelle
@@ -75,7 +74,7 @@ export default () => (
               <p className="font-semibold text-xl">Vota i provvedimenti</p>
               <p className="mt-4">
                 Votando direttamente dal web, non ti perderai mai più una votazione importante sui
-                provvedimenti all'ordine del giorno.
+                provvedimenti all&apos;ordine del giorno.
               </p>
             </Card>
           </div>
@@ -165,11 +164,11 @@ export default () => (
           🤯
         </span>
       </h3>
-      <p className="mt-4 text-lg sm:text-xl font-light">
+      <p className="mt-4 mb-4 sm:mb-0 text-lg sm:text-xl font-light">
         Iscriviti per scoprire di più su cosa possiamo fare per te.
       </p>
       <input
-        className="bg-gray-200 mt-4 py-3 px-2 text-green rounded-l focus:outline-none"
+        className="hidden sm:inline bg-gray-200 mt-4 py-3 px-2 text-green rounded-l focus:outline-none"
         placeholder="La tua migliore email..."
         type="text"
       />
