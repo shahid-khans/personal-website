@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import Button from '../components/Button';
 import Layout from '../components/layout/Layout';
 import TeamImage from '../svg/TeamImage';
@@ -52,13 +53,15 @@ export default () => (
           Ricevi aggiornamenti sullo sviluppo e mostra il tuo supporto.
         </p>
         <input
-          className="hidden sm:inline bg-gray-200 mt-4 py-3 px-2 text-green rounded-l focus:outline-none"
+          className="bg-gray-200 py-2 sm:py-3 mt-8 md:mt-8 pl-2 text-green rounded-l focus:outline-none"
           placeholder="La tua migliore email..."
           type="text"
         />
-        <Button className="mt-8 sm:mt-2" size="default">
-          Tienimi aggiornato
-        </Button>
+        <Link to="/">
+          <Button size="sm" className="sm:py-3 rounded-l-none">
+            Scopri di più
+          </Button>
+        </Link>
       </div>
     </section>
   </Layout>

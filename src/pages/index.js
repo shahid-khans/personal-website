@@ -23,16 +23,16 @@ export default () => (
             Scopri come rendere la tua vita da condomino molto più organizzata grazie a un&apos;app
             fatta apposta per casa tua
           </p>
-          <p className="mt-8 md:mt-8">
-            <input
-              className="hidden sm:inline bg-gray-200 py-3 px-2 text-green rounded-l focus:outline-none"
-              placeholder="La tua migliore email..."
-              type="text"
-            />
-            <Button size="default" className="mt-2 sm:rounded-l-none">
+          <input
+            className="bg-gray-200 py-2 sm:py-3 mt-8 md:mt-8 pl-2 text-green rounded-l focus:outline-none"
+            placeholder="La tua migliore mail..."
+            type="text"
+          />
+          <Link to="/">
+            <Button size="sm" className="sm:py-3 rounded-l-none">
               Scopri di più
             </Button>
-          </p>
+          </Link>
           <p className="my-3 sm:mt-4 text-gray-600 text-green-400">
             100% gratis, no carta di credito
           </p>
@@ -168,13 +168,15 @@ export default () => (
         Iscriviti per scoprire di più su cosa possiamo fare per te.
       </p>
       <input
-        className="hidden sm:inline bg-gray-200 mt-4 py-3 px-2 text-green rounded-l focus:outline-none"
-        placeholder="La tua migliore email..."
+        className="bg-gray-200 py-2 sm:py-3 mt-8 md:mt-8 pl-2 text-green rounded-l focus:outline-none"
+        placeholder="La tua migliore mail..."
         type="text"
       />
-      <Button size="default" className="mt-2 sm:rounded-l-none">
-        Tienimi aggiornato
-      </Button>
+      <Link to="/">
+        <Button size="sm" className="sm:py-3 rounded-l-none">
+          Tienimi aggiornato
+        </Button>
+      </Link>
     </section>
   </Layout>
 );
