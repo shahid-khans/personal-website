@@ -9,8 +9,8 @@ module.exports = {
         },
         secondary: {
           default: 'hsl(345, 63%, 63%)',
-          darker: 'hsl(342, 85%, 63%)',
-        },
+          darker: 'hsl(342, 85%, 63%)'
+        }
       }
     }
   },

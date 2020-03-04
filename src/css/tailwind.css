@@ -1,10 +1,93 @@
 @tailwind base;
 
 a {
-  @apply text-primary;
+  @apply border-solid;
+  @apply border-b-2;
+  border-color: var(--text);
 }
+
 a:hover {
-  @apply text-primary-darker;
+  color: rgb(198, 64, 64);
+  border-color: rgb(198, 64, 64);
+}
+
+body {
+  --bg: rgb(240, 240, 240);
+  --text: hsl(249, 11%, 13%);
+  --toggleSun: hidden;
+  --toggleMoon: visible;
+  --dividerColor: rgb(210, 210, 210);
+  background-color: var(--bg);
+  color: var(--text);
+  transition: color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+body.dark {
+  --bg: hsl(249, 12%, 12%);
+  --text: rgb(240, 240, 240);
+  --toggleSun: visible;
+  --toggleMoon: hidden;
+  --dividerColor: rgb(65, 65, 65);
+  transition: color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
+header footer {
+  background-color: var(--bg);
+}
+
+.sun {
+  visibility: var(--toggleSun);
+  transition: visibility 0.2s ease-in;
+}
+
+.moon {
+  visibility: var(--toggleMoon);
+  transition: visibility 0.2s ease-in;
+}
+
+.darkmode {
+  color: var(--text);
+}
+
+.divMode {
+  background-color: var(--text);
+}
+
+.divider {
+  border-color: var(--dividerColor);
+}
+
+.navlink {
+  @apply text-red-600;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 2rem;
+}
+
+.card {
+  border: 1px solid var(--text);
+}
+
+.card:hover {
+  transform: scale(1.03);
+  transition: transform 0.2s ease;
+}
+
+.card2:hover {
+  transform: scale(1.03);
+  transition: transform 0.2s ease;
 }
 
 @tailwind components;

@@ -1,30 +1,39 @@
 {
-  "name": "gatsby-starter-lander",
-  "author": "Hunter Chang",
-  "repository": "https://github.com/codebushi/gatsby-starter-lander",
+  "name": "blog-v2",
+  "author": "Nicolas Racchi",
+  "repository": "",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
+    "develop": "env-cmd gatsby develop",
     "build": "gatsby build"
   },
   "dependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
     "gatsby": "^2.18.18",
+    "gatsby-plugin-dark-mode": "^1.1.0",
+    "gatsby-plugin-disqus": "^1.1.4",
+    "gatsby-plugin-react-helmet": "^3.1.22",
+    "gatsby-plugin-sharp": "^2.4.5",
+    "gatsby-remark-images": "^3.1.44",
+    "gatsby-remark-relative-images": "^0.3.0",
+    "gatsby-source-contentful": "^2.1.89",
     "gatsby-theme-codebushi": "1.0.0",
+    "gatsby-transformer-remark": "^2.6.53",
     "react": "^16.12.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
-    "react-dom": "^16.12.0",
-    "typewriter-effect": "^2.12.2"
+    "react-dom": "^16.12.0"
   },
   "devDependencies": {
+    "env-cmd": "^10.1.0",
     "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.9.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react-hooks": "^2.3.0",
     "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.9.0",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-react-hooks": "^2.3.0",
     "prettier": "^1.19.1"
   }
 }

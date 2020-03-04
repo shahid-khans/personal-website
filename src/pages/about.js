@@ -1,68 +1,53 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import Button from '../components/Button';
 import Layout from '../components/layout/Layout';
-import TeamImage from '../svg/TeamImage';
+import Head from '../components/Head';
 
-export default () => (
-  <Layout>
-    <section className="pt-12 md:pt-16">
-      <div className="container mx-auto px-8">
-        <div className="text-center  center w-full">
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">Chi Siamo?</h1>
+import Avatar from '../svg/Avatar';
+import EmailIcon from '../svg/EmailIcon';
+
+const About = () => {
+  return (
+    <Layout>
+      <Head title="About" />
+      <div className="flex items-start mt-8 sm:mt-16 justify-center">
+        <div className="w-32 sm:w-48 md:w-64">
+          <Avatar />
         </div>
-        <div className="align-center">
-          <div className="block w-full md:p-32 md:py-0 lg:p-64 lg:py-0 mt-8">
-            <TeamImage />
+      </div>
+      <div>
+        <div className="container mx-auto text-center max-w-3xl">
+          <div className="mt-6 mx-4 sm:mx-2 md:mx-0 sm:mt-5">
+            <p className="font-normal texl-xl sm:text-2xl">
+              I&apos;m a sophomore studying Automation Engineering at{' '}
+              <a href="http://www.polimi.it" rel="noopener noreferrer" target="_blank">
+                Polimi
+              </a>
+              .
+            </p>
+            <p className="mt-2 font-normal texl-xl sm:text-2xl">
+              Among my interests are Data Science, Cryptocurrencies, Tennis, Finance and Robotics.
+            </p>
+            <p className="mt-2 font-normal texl-xl sm:text-2xl">
+              Like many makers, I have a lot of ideas and little time to execute them. When I&apos;m
+              offline, I&apos;m headed to the gym or to the bar.
+            </p>
+            <h2 className="mt-8 mb-3 sm:mb-5 font-bold text-2xl lg:text-3xl xl:text-4xl ">
+              Reach Me
+            </h2>
+            <div className="flex items-end justify-center">
+              <div className="w-5 mr-2 sm:w-6 sm:mr-3">
+                <EmailIcon />
+              </div>
+              <a className="text-sm sm:text-lg" href="mailto:nicolas@racchi.com">
+                nicolas@racchi.com
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </section>
-    <section>
-      <div className="container mx-auto text-center max-w-3xl">
-        <div className="mt-10 sm:mt-20 font-normal texl-xl sm:text-2xl">
-          <p>
-            Siamo due ragazzi studenti di ingegneria. La nostra idea nasce dalle esperienze dei
-            condomini di molti nostri amici e famigliari - ovvero un{' '}
-            <mark className="bg-blue-200">
-              profondo sentimento di inadeguatezza del sistema corrente
-            </mark>
-            , basato sulla{' '}
-            <span className="border-b-2 sm:border-b-4 border-gray-600">scarsa trasparenza</span> e
-            spesso sulla{' '}
-            <span className="border-b-2 sm:border-b-4 border-gray-600">disorganizzazione</span>.
-          </p>
-          <h2 className="mt-8 font-bold text-3xl lg:text-4xl xl:text-5xl ">Cosa vogliamo fare?</h2>
-          <p className="mt-4">
-            Un&apos;app in cui puoi visualizzare al volo informazioni utili, come le date delle{' '}
-            <mark className="bg-yellow-200">prossime riunioni</mark>, una bacheca con le{' '}
-            <mark className="bg-yellow-200">ultime notizie</mark>, ricevere{' '}
-            <mark className="bg-yellow-200">notifiche dagli amministratori</mark>,{' '}
-            <mark className="bg-yellow-200">votare a distanza</mark> per i provvedimenti e molto
-            altro.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section className="container mx-auto mt-20 py-24 bg-blue-200 sm:rounded-lg text-center">
-      <div className="">
-        <h3 className="text-2xl sm:text-3xl font-semibold">
-          Ti piace l&apos;idea? Faccelo sapere!
-        </h3>
-        <p className="mt-4 text-lg sm:text-xl font-light">
-          Ricevi aggiornamenti sullo sviluppo e mostra il tuo supporto.
-        </p>
-        <input
-          className="bg-gray-200 py-2 sm:py-3 mt-8 md:mt-8 pl-2 text-green rounded-l focus:outline-none"
-          placeholder="La tua migliore email..."
-          type="text"
-        />
-        <Link to="/">
-          <Button size="sm" className="sm:py-3 rounded-l-none">
-            Scopri di più
-          </Button>
-        </Link>
-      </div>
-    </section>
-  </Layout>
-);
+    </Layout>
+  );
+};
+
+export default About;

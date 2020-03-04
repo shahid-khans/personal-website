@@ -1,182 +1,247 @@
 import React from 'react';
-import { Link } from 'gatsby';
-import Button from '../components/Button';
-import Card from '../components/Card';
-import CustomerCard from '../components/CustomerCard';
-import LabelText from '../components/LabelText';
+import { Link, useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/layout/Layout';
-import SplitSection from '../components/SplitSection';
-import StatsBox from '../components/StatsBox';
-import customerData from '../data/customer-data';
-import HeroImage from '../svg/HeroImage';
-import SvgCharts from '../svg/SvgCharts';
+import Head from '../components/Head';
 
-export default () => (
-  <Layout>
-    <section className="pt-20 md:pt-40">
-      <div className="container mx-auto px-8 lg:flex">
-        <div className="text-center lg:text-left lg:w-1/2">
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
-            Il modo smart di vivere il condominio
-          </h1>
-          <p className="text-xl lg:text-2xl mt-6 font-light">
-            Scopri come rendere la tua vita da condomino molto più organizzata grazie a un&apos;app
-            fatta apposta per casa tua
-          </p>
-          <input
-            className="bg-gray-200 py-2 sm:py-3 mt-8 md:mt-8 pl-2 text-green rounded-l focus:outline-none"
-            placeholder="La tua migliore mail..."
-            type="text"
-          />
-          <Link to="/">
-            <Button size="sm" className="sm:py-3 sm:px-8 rounded-l-none">
-              Scopri di più
-            </Button>
+import Avatar from '../svg/Avatar';
+import ebec from '../img/ebec.jpeg';
+import stock from '../img/stock.jpeg';
+import machineLearning from '../img/machine-learning.jpg';
+
+const Index = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allContentfulBlogPost(sort: { fields: publishedDate, order: DESC }) {
+        edges {
+          node {
+            title
+            slug
+            publishedDate(formatString: "MMM DD")
+          }
+        }
+      }
+    }
+  `);
+
+  const edge = data.allContentfulBlogPost.edges;
+
+  function Show5Posts() {
+    return (
+      <ul className="mt-5 mx-5 sm:mx-auto sm:max-w-xl">
+        <li className="my-4">
+          <Link
+            className="border-none whitespace-nowrap overflow-x-auto"
+            to={`/blog/${edge[0].node.slug}`}
+          >
+            <p className="text-left sm:inline-block uppercase text-red-600 mr-5 text-xs font-semibold tracking-wider">
+              {edge[0].node.publishedDate}
+            </p>
+            <h2 className="inline-block sm:text-lg font-light sm:hover:font-medium">
+              {edge[0].node.title}
+            </h2>
           </Link>
-          <p className="my-3 sm:mt-4 text-gray-600 text-green-400">
-            100% gratis, no carta di credito
-          </p>
-        </div>
-        <div className="lg:w-1/2 mt-4 sm:mt-0">
-          <HeroImage />
-        </div>
-      </div>
-    </section>
-    <section id="features" className="py-20 lg:pb-40 lg:pt-48">
-      <div className="container mx-auto text-center">
-        <h2 className="text-3xl lg:text-5xl font-semibold">
-          Caratteristiche{' '}
-          <span role="img" aria-label="hand pointing down">
-            👇🏻
-          </span>
-        </h2>
-        <div className="flex flex-col sm:flex-row sm:-mx-3 mt-12">
-          <div className="flex-1 px-3">
-            <Card className="mb-8">
-              <p className="font-semibold text-xl">Sempre aggiornato</p>
-              <p className="mt-4">
-                Ricevi notifiche per non perderti nulla delle decisioni che vengono prese nelle
-                assemblee condominiali.
-              </p>
-            </Card>
-          </div>
-          <div className="flex-1 px-3">
-            <Card className="mb-8">
-              <p className="font-semibold text-xl">Trasparente</p>
-              <p className="mt-4">
-                Non lasciare che nulla venga lasciato agli amministratori senza supervisione. Tieni
-                traccia di ciò che avviene nella tua casa.
-              </p>
-            </Card>
-          </div>
-          <div className="flex-1 px-3">
-            <Card className="mb-8">
-              <p className="font-semibold text-xl">Vota i provvedimenti</p>
-              <p className="mt-4">
-                Votando direttamente dal web, non ti perderai mai più una votazione importante sui
-                provvedimenti all&apos;ordine del giorno.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </div>
-    </section>
-    <SplitSection
-      id="services"
-      primarySlot={
-        <div className="lg:pr-32 xl:pr-48">
-          <h3 className="text-3xl font-semibold leading-tight">Market Analysis</h3>
-          <p className="mt-8 text-xl font-light leading-relaxed">
-            Our team of enthusiastic marketers will analyse and evaluate how your company stacks
-            against the closest competitors
-          </p>
-        </div>
-      }
-      secondarySlot={<SvgCharts />}
-    />
-    <SplitSection
-      reverseOrder
-      primarySlot={
-        <div className="lg:pl-32 xl:pl-48">
-          <h3 className="text-3xl font-semibold leading-tight">
-            Design And Plan Your Business Growth Steps
-          </h3>
-          <p className="mt-8 text-xl font-light leading-relaxed">
-            Once the market analysis process is completed our staff will search for opportunities
-            that are in reach
-          </p>
-        </div>
-      }
-      secondarySlot={<SvgCharts />}
-    />
-    <SplitSection
-      primarySlot={
-        <div className="lg:pr-32 xl:pr-48">
-          <h3 className="text-3xl font-semibold leading-tight">
-            Search For Performance Optimization
-          </h3>
-          <p className="mt-8 text-xl font-light leading-relaxed">
-            With all the information in place you will be presented with an action plan that your
-            company needs to follow
-          </p>
-        </div>
-      }
-      secondarySlot={<SvgCharts />}
-    />
+          <hr className="mt-3 shadow divider" />
+        </li>
+        <li className="my-4">
+          <Link
+            className="border-none whitespace-nowrap overflow-x-auto"
+            to={`/blog/${edge[1].node.slug}`}
+          >
+            <p className="text-left sm:inline-block uppercase text-red-600 mr-5 text-xs font-semibold tracking-wider">
+              {edge[1].node.publishedDate}
+            </p>
+            <h2 className="inline-block sm:text-lg font-light sm:hover:font-medium">
+              {edge[1].node.title}
+            </h2>
+          </Link>
+          <hr className="mt-3 shadow divider" />
+        </li>
+        <li className="my-4">
+          <Link
+            className="border-none whitespace-nowrap overflow-x-auto"
+            to={`/blog/${edge[2].node.slug}`}
+          >
+            <p className="text-left sm:inline-block uppercase text-red-600 mr-5 text-xs font-semibold tracking-wider">
+              {edge[2].node.publishedDate}
+            </p>
+            <h2 className="inline-block sm:text-lg font-light sm:hover:font-medium">
+              {edge[2].node.title}
+            </h2>
+          </Link>
+          <hr className="mt-3 shadow divider" />
+        </li>
+        <li className="my-4">
+          <Link
+            className="border-none whitespace-nowrap overflow-x-auto"
+            to={`/blog/${edge[3].node.slug}`}
+          >
+            <p className="text-left sm:inline-block uppercase text-red-600 mr-5 text-xs font-semibold tracking-wider">
+              {edge[3].node.publishedDate}
+            </p>
+            <h2 className="inline-block sm:text-lg font-light sm:hover:font-medium">
+              {edge[3].node.title}
+            </h2>
+          </Link>
+          <hr className="mt-3 shadow divider" />
+        </li>
+        <li className="my-4">
+          <Link
+            className="border-none whitespace-nowrap overflow-x-auto"
+            to={`/blog/${edge[4].node.slug}`}
+          >
+            <p className="text-left sm:inline-block uppercase text-red-600 mr-5 text-xs font-semibold tracking-wider">
+              {edge[4].node.publishedDate}
+            </p>
+            <h2 className="inline-block sm:text-lg font-light sm:hover:font-medium">
+              {edge[4].node.title}
+            </h2>
+          </Link>
+        </li>
+      </ul>
+    );
+  }
 
-    {/*
-    <section id="stats" className="py-20 lg:pt-32">
-      <div className="container mx-auto text-center">
-        <LabelText className="text-gray-600">I risultati dei nostri clienti</LabelText>
-        <div className="flex flex-col sm:flex-row mt-8 lg:px-24">
-          <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="+100%" secondaryText="Stats Information" />
-          </div>
-          <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="+100%" secondaryText="Stats Information" />
-          </div>
-          <div className="w-full sm:w-1/3">
-            <StatsBox primaryText="+100%" secondaryText="Stats Information" />
+  return (
+    <Layout>
+      <Head title="Home" />
+      {/* SEZIONE AVATAR + BIO */}
+      <section>
+        <div className="flex items-start mt-8 sm:mt-16 justify-center">
+          <div className="w-32 sm:w-48 md:w-64">
+            <Avatar />
           </div>
         </div>
-      </div>
-    </section>
-    */}
+        <div className="mt-5 mx-5 sm:mx-auto text-center sm:max-w-2xl">
+          <h3 className="text-base sm:text-2xl font-light">
+            Hi! I&apos;m a young student and I love spending time developing & building things. One
+            day, I want to build robots that learn. <br />
+          </h3>
+        </div>
+      </section>
 
-    {/*
-    <section id="testimonials" className="py-20 lg:py-40">
-      <div className="container mx-auto">
-        <LabelText className="mb-8 text-gray-600 text-center">What customers are saying</LabelText>
-        <div className="flex flex-col md:flex-row md:-mx-3">
-          {customerData.map(customer => (
-            <div key={customer.customerName} className="flex-1 px-3">
-              <CustomerCard customer={customer} />
+      {/* PRIMA SEZIONE PER DESKTOP */}
+      <section className="container mx-auto hidden sm:block mx-12">
+        <div className="mt-5">
+          <p
+            className="text-red-600 font-semibold text-center 
+            text-lg sm:text-left sm:mt-12 sm:ml-10 sm:text-xl uppercase"
+          >
+            Featured Articles
+          </p>
+          <hr className="mt-1 mx-10 shadow divider" />
+        </div>
+
+        <div className="mt-5 sm:mt-8 sm:ml-10 mx-5">
+          <div className="md:flex md:justify-center">
+            <Link to="/blog/ebec_2020" className="border-none w-full sm:mr-10 md:w-1/4 ">
+              <img
+                src={ebec}
+                alt="ebec 2020 engineering competition"
+                className="shadow-xl rounded card2"
+                style={{
+                  boxShadow: '0 10px 28px rgba(0,0,0,.38)'
+                }}
+              />
+              <h4 className="mt-5 font-medium text-xl leading-tight mb-5">
+                EBEC 2020 Engineering Competition
+              </h4>
+            </Link>
+            <Link to="/blog/stock_price_prediction" className="border-none w-full sm:mx-0 md:w-1/4">
+              <img
+                src={stock}
+                alt="stock price prediction bot"
+                className="shadow-xl rounded card2"
+                style={{
+                  boxShadow: '0 10px 28px rgba(0,0,0,.38)'
+                }}
+              />
+              <h4 className="mt-5 font-medium text-xl leading-tight mb-5">
+                Stock Price Prediction Bot with LSTM RNNs
+              </h4>
+            </Link>
+            <Link to="/blog/ml-course-coursera" className="border-none w-full sm:ml-10 md:w-1/4">
+              <img
+                src={machineLearning}
+                alt="machine learning on Coursera"
+                className="shadow-xl rounded card2"
+                style={{
+                  boxShadow: '0 10px 28px rgba(0,0,0,.38)'
+                }}
+              />
+              <h4 className="mt-5 font-medium text-xl leading-tight mb-5">
+                Machine Learning @Coursera by Andrew Ng (review)
+              </h4>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* PRIMA SEZIONE PER MOBILE */}
+      <section className="block sm:hidden">
+        <div className="mt-5">
+          <p
+            className="text-red-600 font-semibold text-center 
+            text-lg sm:text-left sm:mt-12 sm:ml-10 sm:text-2xl uppercase"
+          >
+            Featured Articles
+          </p>
+          <hr className="mt-1 mx-10 divider" />
+        </div>
+        <div className="mt-5 sm:mt-8 sm:ml-10 mx-5">
+          <div className="md:flex md:justify-center ">
+            <div className="relative">
+              <Link to="/blog/ebec_2020" className="border-none">
+                <img
+                  src={ebec}
+                  alt="ebec 2020 engineering competition"
+                  className="z-0 opacity-25 w-full h-48 shadow-xl rounded-lg "
+                  style={{
+                    boxShadow: '0 10px 28px rgba(0,0,0,.38)'
+                  }}
+                />
+                <h4 className="absolute inset-0 mt-20 mx-4 text-center leading-snug text-xl">
+                  EBEC 2020 Engineering Competition
+                </h4>
+              </Link>
             </div>
-          ))}
+            <div className="relative mt-5">
+              <Link to="/blog/stock_price_prediction" className="border-none">
+                <img
+                  src={stock}
+                  alt="stock price prediction bot"
+                  className="z-0 opacity-25 w-full shadow-xl rounded-lg"
+                  style={{
+                    boxShadow: '0 10px 28px rgba(0,0,0,.38)'
+                  }}
+                />
+                <h4 className="absolute inset-0 mt-20 mx-4 text-center leading-snug text-xl">
+                  Stock Price Prediction Bot with LSTM RNNs
+                </h4>
+              </Link>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-    */}
-    <section className="container mx-auto mt-20 py-24 bg-blue-200 sm:rounded-lg text-center">
-      <h3 className="text-2xl sm:text-3xl font-semibold">
-        Gestire il condominio non deve essere un peso{' '}
-        <span role="img" aria-label="hand pointing down">
-          🤯
-        </span>
-      </h3>
-      <p className="mt-4 mb-4 sm:mb-0 text-lg sm:text-xl font-light">
-        Iscriviti per scoprire di più su cosa possiamo fare per te.
-      </p>
-      <input
-        className="bg-gray-200 py-2 sm:py-3 mt-8 md:mt-8 pl-2 text-green rounded-l focus:outline-none"
-        placeholder="La tua migliore mail..."
-        type="text"
-      />
-      <Link to="/">
-        <Button size="sm" className="sm:py-3 rounded-l-none">
-          Tienimi aggiornato
-        </Button>
-      </Link>
-    </section>
-  </Layout>
-);
+      </section>
+
+      {/* 5 ULTIMI ARTICOLI */}
+      <section>
+        <div className="mt-12 sm:mt-16 mb-8">
+          <Show5Posts />
+        </div>
+        <div className="text-center mb-12">
+          <Link to="/blog" className="border-none">
+            <button
+              className="fill-current rounded-sm divider uppercase text-xs font-semibold
+            border-solid border-2 px-4 py-1 hover:border-gray-600 tracking-wide focus:outline-none"
+              type="button"
+            >
+              View More
+            </button>
+          </Link>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default Index;
