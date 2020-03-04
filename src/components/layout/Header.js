@@ -1,7 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
+import { slide as Menu } from 'react-burger-menu';
+import CustomThemeToggler from '../CustomThemeToggler';
+import '../../css/hamburgerMenu.css';
+
 import LightMode from '../../svg/LightMode';
 import DarkMode from '../../svg/DarkMode';
 
@@ -14,6 +17,14 @@ const Header = () => (
           Nicolas Racchi
         </Link>
       </div>
+      <div className="block sm:hidden">
+        <Menu right disableAutoFocus>
+          <Link to="/">Home</Link>
+          <Link to="/blog">Articles</Link>
+          <Link to="/projects">Projects</Link>
+          <Link to="/about">About Me</Link>
+        </Menu>
+      </div>
       <div className="flex mt-2 text-base hidden sm:inline">
         <Link to="/blog" className="border-none px-4" activeClassName="navlink">
           Articles
@@ -25,26 +36,8 @@ const Header = () => (
           About Me
         </Link>
       </div>
-      <div className="themetoggler rounded-full shadow-2xl pt-1 px-2 divMode ml-0 sm:ml-8 md:ml-12 lg:ml-20 mt-3 sm:mt-0 ">
-        <ThemeToggler>
-          {({ theme, toggleTheme }) => (
-            // eslint-disable-next-line jsx-a11y/label-has-associated-control
-            <label>
-              <input
-                type="checkbox"
-                onChange={e => toggleTheme(e.target.checked ? 'dark' : 'light')}
-                checked={theme === 'dark'}
-              />
-              <div className="inline-block text-yellow-600 sun cursor-pointer">
-                <LightMode />
-              </div>
-              <div className="inline-block text-yellow-600 moon cursor-pointer">
-                <DarkMode />
-              </div>
-            </label>
-          )}
-        </ThemeToggler>
-      </div>
+
+      <CustomThemeToggler />
     </div>
   </header>
 );
