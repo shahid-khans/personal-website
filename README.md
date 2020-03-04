@@ -16,4 +16,5 @@
 
 ## TODO:
 
-- Aggiungere Hamburger menu per mobile
+- Aggiungere Hamburger menu per mobile e navigation
+- Implementare Newsletter form con raccolta su Netlify

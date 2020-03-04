@@ -90,6 +90,10 @@ header footer {
   transition: transform 0.2s ease;
 }
 
+.themetoggler {
+  transform: scale(0.75);
+}
+
 @tailwind components;
 
 @tailwind utilities;

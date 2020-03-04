@@ -25,7 +25,7 @@ const Header = () => (
           About Me
         </Link>
       </div>
-      <div className="rounded-full shadow-2xl pt-1 px-2 divMode ml-0 sm:ml-8 md:ml-12 lg:ml-20 mt-3 sm:mt-0 ">
+      <div className="themetoggler rounded-full shadow-2xl pt-1 px-2 divMode ml-0 sm:ml-8 md:ml-12 lg:ml-20 mt-3 sm:mt-0 ">
         <ThemeToggler>
           {({ theme, toggleTheme }) => (
             // eslint-disable-next-line jsx-a11y/label-has-associated-control
