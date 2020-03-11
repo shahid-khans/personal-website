@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'gatsby';
 import Layout from '../components/layout/Layout';
 import Head from '../components/Head';
 
-import Avatar from '../svg/Avatar';
+import profilepic from '../img/profilepic.png';
 import EmailIcon from '../svg/EmailIcon';
 import LinkedinIcon from '../svg/LinkedinIcon';
 import MediumIcon from '../svg/MediumIcon';
@@ -13,9 +12,10 @@ const About = () => {
   return (
     <Layout>
       <Head title="About" />
+
       <div className="flex items-start mt-8 sm:mt-16 justify-center">
-        <div className="w-32 sm:w-48 md:w-64">
-          <Avatar />
+        <div className="w-32 sm:w-48 md:w-56">
+          <img src={profilepic} alt="profile pic" />
         </div>
       </div>
       <div>
@@ -38,7 +38,8 @@ const About = () => {
             <h2 className="mt-8 mb-3 sm:mb-5 font-bold text-xl lg:text-2xl xl:text-3xl ">
               Reach Me:
             </h2>
-            {/* LINK SECTION */}
+
+            {/* LINKS SECTION */}
             <div className="container">
               <div className="flex items-end justify-center">
                 <div className="w-5 mr-2 sm:w-6 sm:mr-3">
@@ -60,6 +61,7 @@ const About = () => {
                   className="text-sm sm:text-lg"
                   href="https://github.com/nicolas-racchi"
                   rel="noopener noreferrer"
+                  target="_blank"
                 >
                   nicolas-racchi
                 </a>

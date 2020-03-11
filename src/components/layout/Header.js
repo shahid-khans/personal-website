@@ -1,12 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { slide as Menu } from 'react-burger-menu';
 import CustomThemeToggler from '../CustomThemeToggler';
 import '../../css/hamburgerMenu.css';
-
-import LightMode from '../../svg/LightMode';
-import DarkMode from '../../svg/DarkMode';
 
 const Header = () => (
   <header className="top-0 z-10">
@@ -19,10 +15,21 @@ const Header = () => (
       </div>
       <div className="block sm:hidden">
         <Menu right disableAutoFocus>
-          <Link to="/">Home</Link>
-          <Link to="/blog">Articles</Link>
-          <Link to="/projects">Projects</Link>
-          <Link to="/about">About Me</Link>
+          <Link className="" to="/">
+            Home
+          </Link>
+          <Link className="mt-3" to="/blog">
+            Articles
+          </Link>
+          <Link className="mt-3" to="/projects">
+            Projects
+          </Link>
+          <Link className="mt-10" to="/about">
+            About Me
+          </Link>
+          <Link className="mt-3" to="/newsletter">
+            Newsletter
+          </Link>
         </Menu>
       </div>
       <div className="flex mt-2 text-base hidden sm:inline">
@@ -34,6 +41,13 @@ const Header = () => (
         </Link>
         <Link to="/about" className="px-4 border-none" activeClassName="navlink">
           About Me
+        </Link>
+        <Link
+          to="/newsletter"
+          className="px-4 border-none hidden md:inline"
+          activeClassName="navlink"
+        >
+          Newsletter
         </Link>
       </div>
 

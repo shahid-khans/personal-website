@@ -3,9 +3,9 @@ import { Link, useStaticQuery, graphql } from 'gatsby';
 import Layout from '../components/layout/Layout';
 import Head from '../components/Head';
 
-import Avatar from '../svg/Avatar';
 import ebec from '../img/ebec.jpeg';
 import stock from '../img/stock.jpeg';
+import profilepic from '../img/profilepic.png';
 import machineLearning from '../img/machine-learning.jpg';
 
 const Index = () => {
@@ -104,17 +104,18 @@ const Index = () => {
   return (
     <Layout>
       <Head title="Home" />
+
       {/* SEZIONE AVATAR + BIO */}
       <section>
         <div className="flex items-start mt-8 sm:mt-16 justify-center">
-          <div className="w-32 sm:w-48 md:w-64">
-            <Avatar />
+          <div className="w-32 sm:w-48 md:w-56">
+            <img src={profilepic} alt="profile pic" />
           </div>
         </div>
         <div className="mt-5 mx-5 sm:mx-auto text-center sm:max-w-2xl">
           <h3 className="text-base sm:text-2xl font-light">
             Hi! I&apos;m a young student and I love spending time developing & building things. One
-            day, I want to build robots that learn. <br />
+            day, I want to build robots that learn.
           </h3>
         </div>
       </section>

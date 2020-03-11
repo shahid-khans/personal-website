@@ -20,7 +20,7 @@ const BlogPage = () => {
 
   return (
     <Layout>
-      <Head title="Blog" />
+      <Head title="Articles" />
       <div>
         <h1 className="text-center mt-8 sm:text-3xl sm:font-semibold mx-4 sm:mx-0 text-xl">
           Here&apos;s a list of all my articles.
