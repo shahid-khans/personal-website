@@ -27,7 +27,7 @@ const newsletter = () => {
           >
             <input type="hidden" name="form-name" value="newsletter" />
             <input
-              className="shadow mt-4 appearance-none border rounded py-2 px-3 text-grey-darker"
+              className="shadow mt-4 appearance-none border rounded py-2 px-3 text-black"
               placeholder="Your best email"
               type="email"
               name="email"
