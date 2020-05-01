@@ -4,6 +4,7 @@ module.exports = {
     author: 'Nicolas Racchi'
   },
   plugins: [
+    'gatsby-plugin-layout',
     {
       resolve: 'gatsby-plugin-disqus',
       options: {
