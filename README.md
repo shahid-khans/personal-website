@@ -13,5 +13,3 @@
 - react-helmet
 - source-contentful
 - sharp
-
-## TODO:
