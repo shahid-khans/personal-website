@@ -3,7 +3,7 @@
 /* eslint-disable react/destructuring-assignment */
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { Disqus } from 'gatsby-plugin-disqus';
 
@@ -47,6 +47,9 @@ const Blog = props => {
   return (
     <Layout>
       <Head title={props.data.contentfulBlogPost.title} />
+      {/* Note: the default meta description for blog posts is set to the first 3-4 lines of the article.
+      add a "desc" field to the Head element just like every other page to customize it. */}
+
       <div className="lg:max-w-6xl mx-auto mt-6 sm:mt-10">
         <div className="lg:mx-16 md:mx-12 sm:mx-8 mx-3">
           <p className="text-center uppercase text-red-600 text-sm font-bold tracking-widest">

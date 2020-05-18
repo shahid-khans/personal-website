@@ -11,7 +11,8 @@ import GitHubIcon from '../svg/GitHubIcon';
 const About = () => {
   return (
     <Layout>
-      <Head title="About" />
+      <Head title="About" desc="Hi, I'm a sophomore studying automation engineering at Polimi. 
+        Read more about me here!" />
 
       <div className="flex items-start mt-8 sm:mt-16 justify-center">
         <div className="w-32 sm:w-48 md:w-56">

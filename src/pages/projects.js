@@ -21,7 +21,7 @@ const Projects = () => {
 
   return (
     <Layout>
-      <Head title="Projects" />
+      <Head title="Projects" desc="Take a look at my projects!" />
       <div className="text-center container mx-auto">
         <h1 className="mt-8 mb-5 sm:text-3xl sm:font-semibold mx-4 sm:mx-0 text-xl">
           Take a look at my Projects

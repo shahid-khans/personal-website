@@ -103,7 +103,11 @@ const Index = () => {
 
   return (
     <Layout>
-      <Head title="Home" />
+      <Head
+        title="Home"
+        desc="Hi! I'm a young student and I love spending time developing & building things. One
+            day, I want to build robots that learn."
+      />
 
       {/* SEZIONE AVATAR + BIO */}
       <section>

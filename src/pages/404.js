@@ -8,7 +8,7 @@ import NotFoundImage from '../svg/NotFoundImage';
 const NotFound = () => {
   return (
     <Layout>
-      <Head title="Not Found" />
+      <Head title="Not Found" desc="Oops. Page not found." />
       <div className="flex items-start mt-8 sm:mt-16 justify-center">
         <div className="w-48 sm:w-64">
           <h1 className="text-center text-4xl mb-5">404 ...</h1>
