@@ -45,6 +45,10 @@ _Note: the only required variables are `CONTENTFUL_SPACE_ID` and `CONTENTFUL_ACC
 The connection with Contentful requires a bit of know-how. This is because the actual name of your contentful collections is going to be different from mine, depending on how you create your Contentful content models. If you need help, I recommend following this [tutorial](https://medium.com/codingthesmartway-com-blog/gatsby-and-contentful-the-headless-cms-approach-5c7137145ace).
 Don't hesitate contacting me if you need anything else.
 
+## Theme performance
+
+<img align="center" alt="lighthouse speed report" src="./lighthouse-report.png" />
+
 ## Author
 
 👤 **Nicolas Racchi**
