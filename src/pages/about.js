@@ -11,8 +11,11 @@ import GitHubIcon from '../svg/GitHubIcon';
 const About = () => {
   return (
     <Layout>
-      <Head title="About" desc="Hi, I'm a sophomore studying automation engineering at Polimi. 
-        Read more about me here!" />
+      <Head
+        title="About"
+        desc="Hi, I'm a sophomore studying automation engineering at Polimi. 
+        Read more about me here!"
+      />
 
       <div className="flex items-start mt-8 sm:mt-16 justify-center">
         <div className="w-32 sm:w-48 md:w-56">
@@ -86,11 +89,11 @@ const About = () => {
                 </div>
                 <a
                   className="text-sm sm:text-lg"
-                  href="https://medium.com/@nicolas_17943"
+                  href="https://medium.com/@nicolas_racchi"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  nicolas17943
+                  nicolas_racchi
                 </a>
               </div>
             </div>

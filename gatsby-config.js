@@ -47,6 +47,16 @@ module.exports = {
           }
         ]
       }
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Nicolas Racchi`,
+        short_name: `N.R.`,
+        start_url: `/`,
+        display: `standalone`,
+        icon: 'src/img/icon.png'
+      }
     }
   ]
 };

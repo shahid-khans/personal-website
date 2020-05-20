@@ -15,6 +15,18 @@ const NotFound = () => {
           <NotFoundImage />
         </div>
       </div>
+      <div className="text-center mt-16">
+        <Link to="/">
+          <button
+            className="shadow bg-indigo-600
+                hover:bg-indigo-500 focus:shadow-outline focus:outline-none 
+                text-white py-2 px-4 rounded"
+            type="button"
+          >
+            Go back Home
+          </button>
+        </Link>
+      </div>
     </Layout>
   );
 };
