@@ -5,7 +5,10 @@ import Head from '../components/Head';
 const newsletter = () => {
   return (
     <Layout>
-      <Head title="Newsletter" desc="Hey! Sign up to my newsletter to receive emails from me about my next write-ups and more interesting stuff!" />
+      <Head
+        title="Newsletter"
+        desc="Hey! Sign up to my newsletter to receive emails from me about my next write-ups and more interesting stuff!"
+      />
 
       <section className="container mx-auto max-w-3xl text-center">
         <h1 className="text-center mt-8 sm:text-3xl sm:font-semibold mx-4 sm:mx-0 text-xl">
