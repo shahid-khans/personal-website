@@ -4,6 +4,12 @@ module.exports = {
     author: 'Nicolas Racchi'
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-canonical-urls',
+      options: {
+        siteUrl: 'https://www.nicolasracchi.com'
+      }
+    },
     'gatsby-plugin-layout',
     {
       resolve: 'gatsby-plugin-disqus',
