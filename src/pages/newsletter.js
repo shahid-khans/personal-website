@@ -15,9 +15,8 @@ const newsletter = () => {
           Sign up to my newsletter
         </h1>
         <p className="mt-6 mx-2 font-normal texl-lg sm:text-xl">
-          I&apos;ll send you an email once I&apos;ve published an article. I also try to keep a
-          weekly brew of my favorite blog posts, tools, general thoughts and ideas that I come
-          across.
+          I&apos;ll send you an email once I&apos;ve published an article. I also write a weekly
+          brew of my favorite articles, tools, general thoughts and ideas that I come across.
         </p>
         <div className="inline-block">
           <form
@@ -36,17 +35,19 @@ const newsletter = () => {
               name="email"
             />
             <button
-              className="inline ml-2 shadow bg-indigo-600 sm:uppercase
-                hover:bg-indigo-500 focus:shadow-outline focus:outline-none 
-                text-white py-2 px-4 rounded"
+              className="inline ml-2 shadow bg-red-700 sm:uppercase
+                hover:bg-red-600 focus:shadow-outline focus:outline-none 
+                text-white py-2 px-5 rounded tracking-wide"
               type="submit"
             >
-              Subscribe
+              Join
             </button>
           </form>
         </div>
-        <p className="mt-6 mx-2 font-light text-base sm:text-lg ">
-          I will not sell your data or spam you.
+        <div className="mt-5" />
+        <hr className="mt-1 mx-10 shadow divider" />
+        <p className="mt-2 mx-2 font-light text-base sm:text-lg italic">
+          I will not spam you. <br />I hate spam just as much as you.
         </p>
       </section>
     </Layout>

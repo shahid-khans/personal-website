@@ -10,6 +10,7 @@
     "build": "gatsby build"
   },
   "dependencies": {
+    "@contentful/rich-text-plain-text-renderer": "^14.0.0",
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "gatsby": "^2.22.4",
     "gatsby-plugin-canonical-urls": "^2.3.2",
@@ -29,7 +30,8 @@
     "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-burger-menu": "^2.6.13",
     "react-dom": "^16.13.1",
-    "react-spring": "^8.0.27"
+    "react-spring": "^8.0.27",
+    "reading-time": "^1.2.0"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",

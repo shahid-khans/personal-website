@@ -105,7 +105,7 @@ const Index = () => {
     <Layout>
       <Head
         title="Home"
-        desc="Hi! I'm a young student and I love spending time developing & building things. One
+        desc="Hi! I love spending time developing & building things. One
             day, I want to build robots that learn."
       />
 
@@ -118,9 +118,21 @@ const Index = () => {
         </div>
         <div className="mt-5 mx-5 sm:mx-auto text-center sm:max-w-2xl">
           <h3 className="text-base sm:text-2xl font-light">
-            Hi! I&apos;m a young student and I love spending time developing & building things. One
-            day, I want to build robots that learn.
+            Hi! I love spending time developing & building things.
+            <br /> I write about the technologies that inspire me.
           </h3>
+        </div>
+        <div className="mx-auto text-center mt-5">
+          <Link to="/newsletter" className="border-none">
+            <button
+              className="shadow bg-red-700 
+                hover:bg-red-600 focus:outline-none
+                text-white py-1 sm:py-2 px-3 sm:px-4 rounded sm:font-medium tracking-wide"
+              type="button"
+            >
+              Join my Newsletter
+            </button>
+          </Link>
         </div>
       </section>
 

@@ -1,10 +1,9 @@
 import React from 'react';
 import { TransitionProvider, TransitionViews } from 'gatsby-plugin-transitions';
 
-// QUESTO COMPONENTE SERVE PER LE ANIMAZIONI.
-// PER CAMBIARE IL LAYOUT, ANDARE IN
-// /COMPONENTS/LAYOUT
-// PER MODIFICARE LE ANIMAZIONI INVECE, EDITARE QUESTO FILE.
+// This component is needed for page animations.
+// To change the layout, head in /components/layout
+// To modify animations instead, edit this file.
 
 const Layout = ({ location, children }) => {
   return (

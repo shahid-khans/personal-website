@@ -1,10 +1,11 @@
 /* eslint-disable object-shorthand */
 /* eslint-disable prefer-destructuring */
 /* eslint-disable react/destructuring-assignment */
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { graphql } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
+import readingTime from 'reading-time';
 import { Disqus } from 'gatsby-plugin-disqus';
 
 import '../css/blogPost.css';
@@ -44,6 +45,13 @@ const Blog = props => {
     }
   };
 
+  const getReadingTime = () => {
+    const doc = props.data.contentfulBlogPost.body.json;
+    const text = documentToPlainTextString(doc);
+    const result = readingTime(text);
+    return result;
+  };
+
   return (
     <Layout>
       <Head title={props.data.contentfulBlogPost.title} />
@@ -53,13 +61,14 @@ const Blog = props => {
       <div className="lg:max-w-6xl mx-auto mt-6 sm:mt-10">
         <div className="lg:mx-16 md:mx-12 sm:mx-8 mx-3">
           <p className="text-center uppercase text-red-600 text-sm font-bold tracking-widest">
-            {props.data.contentfulBlogPost.publishedDate}
+            {props.data.contentfulBlogPost.publishedDate} – {getReadingTime().text}
           </p>
           <div className="flex text-center justify-center items-start">
             <h1 className="text-2xl font-bold mb-6 md:mb-10 md:text-4xl max-w-3xl">
               {props.data.contentfulBlogPost.title}
             </h1>
           </div>
+
           <div className="blogpost text-base sm:text-lg lg:text-xl font-normal sm:font-light">
             {documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}
           </div>
