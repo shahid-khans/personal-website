@@ -15,7 +15,7 @@ const Header = () => (
       </div>
       <div className="block sm:hidden">
         <Menu right disableAutoFocus>
-          <Link className="" to="/">
+          <Link className="mt-1" to="/">
             Home
           </Link>
           <Link className="mt-3" to="/blog">

@@ -7,6 +7,7 @@ import EmailIcon from '../svg/EmailIcon';
 import LinkedinIcon from '../svg/LinkedinIcon';
 import MediumIcon from '../svg/MediumIcon';
 import GitHubIcon from '../svg/GitHubIcon';
+import TwitterIcon from '../svg/TwitterIcon';
 
 const About = () => {
   return (
@@ -39,61 +40,69 @@ const About = () => {
               Like many makers, I have a lot of ideas and little time to execute them. When I&apos;m
               offline, I&apos;m headed to the gym or to the bar.
             </p>
-            <h2 className="mt-8 mb-3 sm:mb-5 font-bold text-xl lg:text-2xl xl:text-3xl ">
-              Reach Me:
+            <h2 className="mt-8 mb-3 sm:mb-5 font-bold text-xl lg:text-3xl xl:text-3xl ">
+              Reach Me
             </h2>
 
             {/* LINKS SECTION */}
-            <div className="container">
+            <div className="container flex justify-center">
               <div className="flex items-end justify-center">
-                <div className="w-5 mr-2 sm:w-6 sm:mr-3">
-                  <EmailIcon />
-                </div>
                 <a
-                  className="text-sm sm:text-lg"
+                  className="text-sm sm:text-lg border-none"
                   href="mailto:nicolas@racchi.com"
                   rel="noopener noreferrer"
                 >
-                  nicolas@racchi.com
+                  <div className="w-8 mx-3 sm:w-10 sm:mx-5">
+                    <EmailIcon />
+                  </div>
                 </a>
               </div>
               <div className="flex mt-3 items-end justify-center">
-                <div className="w-5 mr-2 sm:w-6 sm:mr-3">
-                  <GitHubIcon />
-                </div>
                 <a
-                  className="text-sm sm:text-lg"
+                  className="text-sm sm:text-lg border-none"
+                  href="https://twitter.com/@NicolasRacchi"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  <div className="w-8 mx-3 sm:w-10 sm:mx-5">
+                    <TwitterIcon />
+                  </div>
+                </a>
+              </div>
+              <div className="flex mt-3 items-end justify-center">
+                <a
+                  className="text-sm sm:text-lg border-none"
                   href="https://github.com/nicolas-racchi"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  nicolas-racchi
+                  <div className="w-8 mx-3 sm:w-10 sm:mx-5">
+                    <GitHubIcon />
+                  </div>
                 </a>
               </div>
               <div className="flex mt-3 items-end justify-center">
-                <div className="w-5 mr-2 sm:w-6 sm:mr-3">
-                  <LinkedinIcon />
-                </div>
                 <a
-                  className="text-sm sm:text-lg"
+                  className="text-sm sm:text-lg border-none"
                   href="https://www.linkedin.com/in/nicolas-racchi/"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  nicolas-racchi
+                  <div className="w-8 mx-3 sm:w-10 sm:mx-5">
+                    <LinkedinIcon />
+                  </div>
                 </a>
               </div>
               <div className="flex mt-3 items-end justify-center">
-                <div className="w-5 mr-2 sm:w-6 sm:mr-3">
-                  <MediumIcon />
-                </div>
                 <a
-                  className="text-sm sm:text-lg"
+                  className="text-sm sm:text-lg border-none"
                   href="https://medium.com/@nicolas_racchi"
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  nicolas_racchi
+                  <div className="w-8 mx-3 sm:w-10 sm:mx-5">
+                    <MediumIcon />
+                  </div>
                 </a>
               </div>
             </div>
