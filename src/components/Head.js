@@ -5,10 +5,7 @@ import { Helmet } from 'react-helmet';
 const Head = ({ title, desc }) => {
   return (
     <Helmet title={`${title} | Nicolas Racchi`}>
-      <meta
-        name="Description"
-        content={`${desc} | Hi! I love spending time developing & building things.`}
-      />
+      <meta name="Description" content={desc} />
     </Helmet>
   );
 };
