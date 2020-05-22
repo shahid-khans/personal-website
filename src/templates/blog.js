@@ -1,8 +1,5 @@
-/* eslint-disable object-shorthand */
-/* eslint-disable prefer-destructuring */
-/* eslint-disable react/destructuring-assignment */
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
 import readingTime from 'reading-time';
@@ -25,17 +22,20 @@ export const query = graphql`
   }
 `;
 
-const disqusConfig = ({ slug, title }) => ({
-  identifier: slug,
-  title: title
-});
-
 const Blog = props => {
+  const { data } = props;
+  const { title, publishedDate, body, slug } = data.contentfulBlogPost;
+
+  const disqusConfig = () => ({
+    identifier: slug,
+    title
+  });
+
   const options = {
     renderNode: {
       'embedded-asset-block': node => {
         const alt = node.data.target.fields.title['en-US'];
-        const url = node.data.target.fields.file['en-US'].url;
+        const { url } = node.data.target.fields.file['en-US'];
         return (
           <div className="lg:max-w-3xl sm:max-w-xl mx-auto">
             <img className="rounded" alt={alt} src={url} />
@@ -54,25 +54,61 @@ const Blog = props => {
 
   return (
     <Layout>
-      <Head title={props.data.contentfulBlogPost.title} />
+      <Head title={title} />
       {/* Note: the default meta description for blog posts is set to the first 3-4 lines of the article.
       add a "desc" field to the Head element just like every other page to customize it. */}
 
       <div className="lg:max-w-6xl mx-auto mt-6 sm:mt-10">
         <div className="lg:mx-16 md:mx-12 sm:mx-8 mx-3">
           <p className="text-center uppercase text-red-600 text-sm font-bold tracking-widest">
-            {props.data.contentfulBlogPost.publishedDate} – {getReadingTime().text}
+            {publishedDate} – {getReadingTime().text}
           </p>
           <div className="flex text-center justify-center items-start">
-            <h1 className="text-2xl font-bold mb-6 md:mb-10 md:text-4xl max-w-3xl">
-              {props.data.contentfulBlogPost.title}
-            </h1>
+            <h1 className="text-2xl font-bold mb-6 md:mb-10 md:text-4xl max-w-3xl">{title}</h1>
           </div>
 
           <div className="blogpost text-base sm:text-lg lg:text-xl font-normal sm:font-light">
-            {documentToReactComponents(props.data.contentfulBlogPost.body.json, options)}
+            {documentToReactComponents(body.json, options)}
           </div>
-          <div className="my-16" />
+          <div className="bg-gray-100 p-4 rounded-t-lg mt-10 sm:mx-16 mb-1 shadow">
+            <div className="mx-4 flex justify-between items-center">
+              <p className="text-sm sm:text-xl text-gray-700 italic">
+                Subcribe to my awesome weekly tech newsletter
+              </p>
+
+              <button
+                type="submit"
+                className="bg-yellow-400 px-4 sm:px-10 py-1 text-black rounded-full 
+                    ml-4 shadow text-lg sm:text-xl focus:outline-none animate-scale"
+              >
+                <Link to="/newsletter" className="border-none">
+                  Join
+                </Link>
+              </button>
+            </div>
+          </div>
+          <div className="bg-gray-100 p-4 rounded-b-lg mb-10 sm:mx-16 shadow">
+            <div className="mx-4 flex justify-between items-center ">
+              <p className="text-sm sm:text-xl text-gray-700 italic">
+                Share this article on Twitter to help others see it!
+              </p>
+
+              <button
+                type="submit"
+                className="bg-blue-400 px-4 sm:px-10 py-1 text-black rounded-full 
+                    ml-4 shadow text-lg sm:text-xl focus:outline-none animate-scale"
+              >
+                <a
+                  href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20blog%20post%20by%20@NicolasRacchi&url=https://www.nicolasracchi.com/blog/${slug}`}
+                  className="border-none"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Share
+                </a>
+              </button>
+            </div>
+          </div>
           <Disqus config={disqusConfig} />
         </div>
       </div>

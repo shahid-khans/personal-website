@@ -41,7 +41,7 @@ const About = () => {
               offline, I&apos;m headed to the gym or to the bar.
             </p>
             <h2 className="mt-8 mb-3 sm:mb-5 font-bold text-xl lg:text-3xl xl:text-3xl ">
-              Reach Me
+              Reach me
             </h2>
 
             {/* LINKS SECTION */}

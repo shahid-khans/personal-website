@@ -18,18 +18,19 @@ const newsletter = () => {
           I&apos;ll send you an email once I&apos;ve published an article. I also write a weekly
           brew of my favorite articles, tools, general thoughts and ideas that I come across.
         </p>
-        <div className="inline-block">
+        <div className="inline-block mt-1">
           <form
             className="text-sm"
             name="newsletter"
             method="post"
-            action="/newsletter"
+            action="/newsletter_confirm"
             data-netlify="true"
             netlify-honeypot="bot-field"
           >
             <input type="hidden" name="form-name" value="newsletter" />
             <input
-              className="shadow mt-4 appearance-none border rounded py-2 px-3 text-black"
+              className="shadow mt-4 appearance-none 
+               rounded py-2 px-3 text-black focus:outline-none"
               placeholder="Your best email"
               type="email"
               name="email"
