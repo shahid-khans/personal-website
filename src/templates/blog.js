@@ -58,7 +58,7 @@ const Code = ({ children }) => {
 };
 
 // Custom quote styling
-const Quote = ({ children }) => <p className="">{children}</p>;
+const Quote = ({ children }) => <p className="custom-quote">{children}</p>;
 
 const Blog = props => {
   const { data } = props;
@@ -106,7 +106,9 @@ const Blog = props => {
             {publishedDate} – {getReadingTime().text}
           </p>
           <div className="flex text-center justify-center items-start">
-            <h1 className="text-2xl font-bold mb-6 md:mb-10 md:text-5xl max-w-3xl">{title}</h1>
+            <h1 className="text-2xl font-bold mb-6 md:mb-10 md:text-5xl max-w-3xl custom-title">
+              {title}
+            </h1>
           </div>
 
           <div className="blogpost text-base sm:text-lg lg:text-xl font-normal sm:font-light">

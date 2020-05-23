@@ -76,8 +76,6 @@ textarea {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 2.25rem;
@@ -195,6 +193,8 @@ textarea {
   list-style-type: decimal;
 }
 .blogpost p {
+  font-family: 'Lato';
+  font-weight: 400;
   margin-left: 0;
   margin-right: 0;
   margin-top: 0;
@@ -204,20 +204,6 @@ textarea {
   padding-top: 0;
   margin-bottom: 1.25rem;
   line-height: 1.5;
-}
-
-.blogpost blockquote {
-  margin-left: 1.45rem;
-  margin-right: 1.45rem;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  text-align: center;
-  font-weight: 300;
-  opacity: 0.9;
 }
 b {
   font-weight: bold;
@@ -255,4 +241,29 @@ p *:last-child {
 }
 li > p {
   margin-bottom: calc(1.45rem / 2);
+}
+
+.custom-quote {
+  opacity: 0.87;
+  font-style: italic;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+    Verdana, sans-serif;
+  text-align: center;
+  margin-left: 50px;
+  padding: 0.5em 10px;
+  quotes: '\201C''\201D''\2018''\2019';
+}
+.custom-quote:before {
+  color: rgb(160, 160, 160);
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+.custom-quote p {
+  display: inline;
+}
+.custom-title {
+  font-family: 'Lato';
 }

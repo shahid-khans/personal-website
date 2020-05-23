@@ -27,12 +27,21 @@ cd personal-website
 npm install && npm run dev
 ```
 
-## Main Dependencies & Tools:
+## Main Dependencies & Tools
 
 - [Gatsby](https://www.gatsbyjs.org) - Awesome and ultra-fast static site generator built on React
 - [React burger menu](https://github.com/negomi/react-burger-menu) - Reponsive menu for mobile devices
 - [Gatsby-source-Contentful](https://www.gatsbyjs.org/packages/gatsby-source-contentful/?=conten) - Really convenient way of managing and publishing articles.
 - [TailwindCSS](https://tailwindcss.com) - Really easy and fast CSS framework, 100% customizable.
+
+## Cool Features
+
+- Code block highlighting with [react-code-blocks](https://github.com/rajinwonderland/react-code-blocks)
+- Blog scrollbar indicator
+- Canonical URLs
+- Disqus Comments
+- Simple page animations
+- Light & Dark mode with custom theme switch
 
 ## Environment variables
 
@@ -40,12 +49,12 @@ You can find all required env variables in the `.env.sample` file.
 
 _Note: the only required variables are `CONTENTFUL_SPACE_ID` and `CONTENTFUL_ACCESS_TOKEN` which are needed for rendering blog posts. You can leave other variables blank to get some warnings._
 
-## Connect your own Contentful ID:
+## Connect your own Contentful ID
 
 The connection with Contentful requires a bit of know-how. This is because the actual name of your contentful collections is going to be different from mine, depending on how you create your Contentful content models. If you need help, I recommend following this [tutorial](https://medium.com/codingthesmartway-com-blog/gatsby-and-contentful-the-headless-cms-approach-5c7137145ace).
 Don't hesitate contacting me if you need anything else.
 
-## Theme performance
+## Lighthouse performance
 
 <img align="center" alt="lighthouse speed report" src="./lighthouse-report.png" />
 

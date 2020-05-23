@@ -34,7 +34,8 @@
     "react-code-blocks": "0.0.7",
     "react-dom": "^16.13.1",
     "react-spring": "^8.0.27",
-    "reading-time": "^1.2.0"
+    "reading-time": "^1.2.0",
+    "typeface-lato": "0.0.75"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
