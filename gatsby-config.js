@@ -5,6 +5,15 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: `gatsby-plugin-scroll-indicator`,
+      options: {
+        color: '#C93434',
+        height: '7px',
+        paths: ['/blog/**'],
+        zIndex: `9999`
+      }
+    },
+    {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
         siteUrl: 'https://www.nicolasracchi.com'
