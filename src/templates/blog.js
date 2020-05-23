@@ -26,9 +26,9 @@ export const query = graphql`
 
 // Custom code highlighting
 const Code = ({ children }) => {
-  if (children.includes('•')) {
+  if (children.indexOf('•') !== -1) {
     const text = children.split('•');
-    const language = text.first;
+    const language = text[0];
     const code = text[1];
     return (
       <div className="lg:max-w-3xl sm:max-w-xl mx-auto">
