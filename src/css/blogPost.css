@@ -256,15 +256,3 @@ p *:last-child {
 li > p {
   margin-bottom: calc(1.45rem / 2);
 }
-
-.blogpost code {
-  background-color: hsla(0, 0%, 0%, 0.14);
-  border-radius: 3px;
-  font-family: 'SFMono-Regular', Consolas, 'Roboto Mono', 'Droid Sans Mono', 'Liberation Mono',
-    Menlo, Courier, monospace;
-  padding: 0;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  font-size: 0.85rem;
-  line-height: 1.45rem;
-}

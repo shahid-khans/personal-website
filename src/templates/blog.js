@@ -3,7 +3,9 @@ import { graphql, Link } from 'gatsby';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer';
 import readingTime from 'reading-time';
+import { CopyBlock, dracula } from 'react-code-blocks';
 import { Disqus } from 'gatsby-plugin-disqus';
+import { BLOCKS, MARKS } from '@contentful/rich-text-types';
 
 import '../css/blogPost.css';
 import Layout from '../components/layout/Layout';
@@ -22,6 +24,23 @@ export const query = graphql`
   }
 `;
 
+// Custom code highlighting
+const Code = ({ children }) => (
+  <div className="lg:max-w-3xl sm:max-w-xl mx-auto">
+    <CopyBlock
+      language="python"
+      text={children}
+      theme={dracula}
+      showLineNumbers={false}
+      wrapLines={false}
+      codeBlock
+    />
+  </div>
+);
+
+// Custom quote styling
+const Quote = ({ children }) => <p className="">{children}</p>;
+
 const Blog = props => {
   const { data } = props;
   const { title, publishedDate, body, slug } = data.contentfulBlogPost;
@@ -32,6 +51,9 @@ const Blog = props => {
   });
 
   const options = {
+    renderMark: {
+      [MARKS.CODE]: code => <Code>{code}</Code>
+    },
     renderNode: {
       'embedded-asset-block': node => {
         const alt = node.data.target.fields.title['en-US'];
@@ -41,7 +63,8 @@ const Blog = props => {
             <img className="rounded" alt={alt} src={url} />
           </div>
         );
-      }
+      },
+      [BLOCKS.QUOTE]: (node, children) => <Quote>{children}</Quote>
     }
   };
 
@@ -64,7 +87,7 @@ const Blog = props => {
             {publishedDate} – {getReadingTime().text}
           </p>
           <div className="flex text-center justify-center items-start">
-            <h1 className="text-2xl font-bold mb-6 md:mb-10 md:text-4xl max-w-3xl">{title}</h1>
+            <h1 className="text-2xl font-bold mb-6 md:mb-10 md:text-5xl max-w-3xl">{title}</h1>
           </div>
 
           <div className="blogpost text-base sm:text-lg lg:text-xl font-normal sm:font-light">
