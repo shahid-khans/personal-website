@@ -25,18 +25,37 @@ export const query = graphql`
 `;
 
 // Custom code highlighting
-const Code = ({ children }) => (
-  <div className="lg:max-w-3xl sm:max-w-xl mx-auto">
-    <CopyBlock
-      language="python"
-      text={children}
-      theme={dracula}
-      showLineNumbers={false}
-      wrapLines={false}
-      codeBlock
-    />
-  </div>
-);
+const Code = ({ children }) => {
+  if (children.includes('•')) {
+    const text = children.split('•');
+    const language = text.first;
+    const code = text[1];
+    return (
+      <div className="lg:max-w-3xl sm:max-w-xl mx-auto">
+        <CopyBlock
+          language={language}
+          text={code}
+          theme={dracula}
+          showLineNumbers={false}
+          wrapLines={false}
+          codeBlock
+        />
+      </div>
+    );
+  }
+  return (
+    <div className="lg:max-w-3xl sm:max-w-xl mx-auto">
+      <CopyBlock
+        language="bash"
+        text={children}
+        theme={dracula}
+        showLineNumbers={false}
+        wrapLines={false}
+        codeBlock
+      />
+    </div>
+  );
+};
 
 // Custom quote styling
 const Quote = ({ children }) => <p className="">{children}</p>;
