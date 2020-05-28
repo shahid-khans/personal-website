@@ -117,40 +117,35 @@ const Blog = props => {
           <div className="bg-gray-100 p-4 rounded-t-lg mt-10 sm:mx-16 mb-1 shadow">
             <div className="mx-4 flex justify-between items-center">
               <p className="text-sm sm:text-xl text-gray-700 italic">
-                Subcribe to my awesome weekly tech newsletter
+                Subcribe to my <span className="underline">awesome</span> tech newsletter
               </p>
 
-              <button
-                type="submit"
+              <Link
+                to="/newsletter"
+                type="button"
                 className="bg-yellow-400 px-4 sm:px-10 py-1 text-black rounded-full 
-                    ml-4 shadow text-lg sm:text-xl focus:outline-none animate-scale"
+                    ml-4 shadow text-lg sm:text-xl focus:outline-none animate-scale border-none"
               >
-                <Link to="/newsletter" className="border-none">
-                  Join
-                </Link>
-              </button>
+                Join
+              </Link>
             </div>
           </div>
           <div className="bg-gray-100 p-4 rounded-b-lg mb-10 sm:mx-16 shadow">
             <div className="mx-4 flex justify-between items-center ">
               <p className="text-sm sm:text-xl text-gray-700 italic">
-                Share this article on Twitter to help others see it!
+                Share this article on <span className="underline">Twitter</span> to help others see
+                it!
               </p>
 
-              <button
-                type="submit"
+              <a
+                href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20blog%20post%20by%20@NicolasRacchi&url=https://www.nicolasracchi.com/blog/${slug}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-blue-400 px-4 sm:px-10 py-1 text-black rounded-full 
-                    ml-4 shadow text-lg sm:text-xl focus:outline-none animate-scale"
+                    ml-4 shadow text-lg sm:text-xl focus:outline-none animate-scale border-none"
               >
-                <a
-                  href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20blog%20post%20by%20@NicolasRacchi&url=https://www.nicolasracchi.com/blog/${slug}`}
-                  className="border-none"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Share
-                </a>
-              </button>
+                Share
+              </a>
             </div>
           </div>
           <Disqus config={disqusConfig} />

@@ -34,7 +34,7 @@ const About = () => {
               .
             </p>
             <p className="mt-2 font-normal texl-lg sm:text-xl">
-              Among my interests are Data Science, Cryptocurrencies, Tennis, Finance and Robotics.
+              Among my interests are Data Science, SaaS, Cryptocurrencies, Finance &amp; Robotics.
             </p>
             <p className="mt-2 font-normal texl-lg sm:text-xl">
               Like many makers, I have a lot of ideas and little time to execute them. When I&apos;m

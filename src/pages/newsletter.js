@@ -14,9 +14,8 @@ const newsletter = () => {
         <h1 className="text-center mt-8 sm:text-3xl sm:font-semibold mx-4 sm:mx-0 text-xl">
           Sign up to my newsletter
         </h1>
-        <p className="mt-6 mx-2 font-normal texl-lg sm:text-xl">
-          I&apos;ll send you an email once I&apos;ve published an article. I also write a weekly
-          brew of my favorite articles, tools, general thoughts and ideas that I come across.
+        <p className="mt-6 md:mt-8 mx-2 font-normal texl-lg sm:text-xl">
+          I write about my favorite articles, tools, books, and ideas.
         </p>
         <div className="inline-block mt-1">
           <form
@@ -45,10 +44,10 @@ const newsletter = () => {
             </button>
           </form>
         </div>
-        <div className="mt-5" />
-        <hr className="mt-1 mx-10 shadow divider" />
+        <div className="mt-6" />
+        <hr className="mx-10 shadow divider" />
         <p className="mt-2 mx-2 font-light text-base sm:text-lg italic">
-          I will not spam you. <br />I hate spam just as much as you.
+          No spam. I hate spam just like you.
         </p>
       </section>
     </Layout>
